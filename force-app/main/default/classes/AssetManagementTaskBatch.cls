@@ -44,7 +44,7 @@ public class AssetManagementTaskBatch implements Database.Batchable<sObject>, Da
                     recordsUpdated += 1;
                 }
             }
-        } catch(Exception e) {
+        } catch(OrchestrationRecoverableException e) {
             System.debug('Exception occurred: ' + e.getMessage());
         }
     }
